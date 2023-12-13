@@ -38,6 +38,7 @@ const Home: React.FC=() => {
         todos.map(todo => (
 
           <li
+          key={todo.id}  // Add the key prop here
           onClick={()=> marktododone(todo.id)}
           className={`  text-4xl ml-1 cursor-pointer font-bold  text-green-400 ${todo.done ?'line-through' : 'no-underline' }`}>
         {todo.value}
